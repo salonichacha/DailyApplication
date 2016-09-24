@@ -3,11 +3,19 @@
 <head>
 	<title>Email Application</title>
 	<script src="https://code.angularjs.org/1.5.8/angular.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.5.8/angular-route.js"></script>
 	<script type="text/javascript" src="script.js"></script>
-</head>
+	</head>
+<style type="text/css">
+.error{
+	border: 10px solid red;
+	width: 80%;
+
+}
+
+</style>
 <body>
-<div ng-controller = "emailCtrl">
-	
-</div>
+<center><h1>Email Application</h1></center>
+<div ng-view></div>
 </body>
 </html>
