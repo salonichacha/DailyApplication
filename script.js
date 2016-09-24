@@ -15,6 +15,8 @@ myApp.config(function($routeProvider){
 });
 
 myApp.controller('emailController',['$scope','$location',function($scope, $location, $element){
+
+		$scope.correct = false;
 		$scope.userDetails = [
 			{userName: "saloni", userPassword: "abc",id:1},
 			{userName: "admin", userPassword: "admin",id:2},
@@ -35,8 +37,10 @@ myApp.controller('emailController',['$scope','$location',function($scope, $locat
 		}
 
 		else{
-			var el1 = angular.element( document.querySelector( '#loginDet' ) );
-			el1.addClass('error');	
+			$scope.correct = true;
+			var el1 = angular.element( document.querySelector( '.form-group' ) );
+			el1.removeClass('has-success')
+			el1.addClass('has-error  has-feedback');	
 			$location.path('/');
 
 		}

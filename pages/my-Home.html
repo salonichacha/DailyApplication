@@ -1,7 +1,16 @@
-<div id="loginDet">
-	Email: <input type="text" name="inputEmail" ng-model="inputEmail" id="inputEmail"></input><br/>
 
-	Password: <input type="password" name="inputPassword" ng-model="inputPassword" id="inputPassword"></input><br/>
+<div id="loginDetails" class="form-group">
 
-	<input type="submit" value="Login" ng-click="userAuth()"></input>
+	<div class="alert alert-danger" role="alert" ng-show="correct">
+  		<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  		<span class="sr-only">Error:</span>
+  		Enter a valid Email Address and Password
+	</div>	
+	<label>Email:</label> 
+	<input type="text" name="inputEmail" ng-model="inputEmail"  class="form-control" id="inputEmail"></input><br/>
+	
+	<label>Password:</label> 
+	<input type="password" name="inputPassword" ng-model="inputPassword" class="form-control" id="inputPassword"></input><br/>
+
+	<button type="button" class="btn btn-primary" ng-click="userAuth()">LogIn</button>
 </div>
