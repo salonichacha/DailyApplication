@@ -1,1 +1,38 @@
-<h1>Welcome</h1>
+<center><h1>Welcome {{username | uppercase}} !</h1></center>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">From : {{choosenDetails.emailSender}}</h4>
+        <h4 class="modal-title" id="myModalLabel">To : {{choosenDetails.emailReceiver}}</h4>
+        <h4 class="modal-title" id="myModalLabel">Subject : {{choosenDetails.emailSnippet}}</h4>
+        <h4 class="modal-title" id="myModalLabel">Time : {{choosenDetails.time}}</h4>
+      </div>
+      <div class="modal-body">
+        {{choosenDetails.emailBody}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Reply</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<center><div style="width: 50%">
+	<table class="table table-striped">
+		  <tr>
+		  	<td><b>Label</b></td>
+		  	<td><b>Description</b></td>
+		  	<td><b>Time</b></td>
+		  </tr>
+		<tr ng-repeat="f in foundUserEmail">
+			<td><a href="" data-toggle="modal" data-target="#myModal" ng-click="choosenEmail(f)">{{f.emailHeader}}</a></td>
+			<td><a href="" ng-click="choosenEmail(f.id)">{{f.emailSnippet}} </a></td>
+			<td><a href="" ng-click="choosenEmail(f.id)">{{f.time}}</a></td>
+		</tr>
+	</table>
+</div></center>

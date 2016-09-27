@@ -7,10 +7,10 @@
   		Enter a valid Email Address and Password
 	</div>	
 	<label>Email:</label> 
-	<input type="text" name="inputEmail" ng-model="inputEmail"  class="form-control" id="inputEmail"></input><br/>
+	<input type="text" name="email" ng-model="inputEmail"  class="form-control" id="inputEmail"></input><br/>
 	
 	<label>Password:</label> 
 	<input type="password" name="inputPassword" ng-model="inputPassword" class="form-control" id="inputPassword"></input><br/>
 
-	<button type="button" class="btn btn-primary" ng-click="userAuth()">LogIn</button>
+	<button type="button" class="btn btn-primary" ng-click="userAuth(inputEmail)">LogIn</button>
 </div>
